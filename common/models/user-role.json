@@ -1,0 +1,25 @@
+{
+  "name": "UserRole",
+  "plural": "userRoles",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "roleName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "users": {
+      "type": "hasMany",
+      "model": "user",
+      "foreignKey": "userRoleId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

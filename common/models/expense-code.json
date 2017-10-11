@@ -1,0 +1,29 @@
+{
+  "name": "ExpenseCode",
+  "plural": "expenseCodes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "codeNumber": {
+      "type": "number",
+      "required": true
+    },
+    "codeName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "expenses": {
+      "type": "hasMany",
+      "model": "Expense",
+      "foreignKey": "expenseCodeId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

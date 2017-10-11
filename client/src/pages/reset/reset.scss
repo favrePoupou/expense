@@ -1,0 +1,19 @@
+.center_div{
+    margin: 0 auto;
+    background-color:#808080;  
+    width:40% /* value of your choice which suits your alignment */    ;
+    text-align: center;
+}
+.center_alert{
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+}
+.btn{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.hasError .form-control{
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+}

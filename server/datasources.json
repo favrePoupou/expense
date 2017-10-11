@@ -1,0 +1,31 @@
+{
+  "cervo": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "cervo_db",
+    "password": "",
+    "name": "cervo",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "emailDatasource": {
+    "name": "emailDatasource",
+    "connector": "mail",    
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.icwebpro.com",
+        "secure": false,
+        "port": 2525,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "smtpjmj@icwebpro.com",
+          "pass": "hale00puna"
+        }
+      }
+    ]
+  }
+}

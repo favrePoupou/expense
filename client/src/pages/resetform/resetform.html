@@ -1,0 +1,27 @@
+<header>
+    <div style="text-align:center">
+        <h1>
+            {{ title }}
+        </h1>
+    </div>
+</header>
+<content>
+    <div class="container center_div">
+        <div class="form-group" [ngClass]="{'hasError': formError.password}">
+            <label for="name">Mot de passe</label>
+            <input type="password" class="form-control" placeholder="Entrez votre mot de passe" [(ngModel)]="password"  required>
+        </div> 
+        <div class="form-group" [ngClass]="{'hasError': formError.passwordConfirm}">
+            <label for="name">Confirmation mot de passe</label>
+            <input type="password" class="form-control" placeholder="Veuillez confirmer votre mot de passe" [(ngModel)]="passwordConfirm"  required>
+        </div>      
+        <button type="submit" class="btn btn-primary" (click)="setNewPassword(password, passwordConfirm)">Soumettre</button>        
+        <div class="form-group">
+            <div class="register"><a routerLink="/" routerLinkActive="active">Retour</a></div>
+        </div>        
+    </div>
+    <div class="form-group center_alert">
+            <alert></alert>
+    </div>
+</content>
+

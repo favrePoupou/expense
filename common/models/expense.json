@@ -1,0 +1,51 @@
+{
+  "name": "Expense",
+  "plural": "expenses",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": {
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "expenseDate": {
+      "type": "date",
+      "required": true
+    },
+    "amountOfExpense": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    },
+    "currency": {
+      "type": "belongsTo",
+      "model": "Currency",
+      "foreignKey": "currencyId"
+    },
+    "expenseCode": {
+      "type": "belongsTo",
+      "model": "ExpenseCode",
+      "foreignKey": "expenseCodeId"
+    },
+    "images": {
+      "type": "hasOne",
+      "model": "Image",
+      "foreignKey": "expenseId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,63 @@
+<content>
+  <div class="addEmployee" [hidden]="showModifyEmployee">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name"><h5><b>Nom</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez le nom" [(ngModel)]="firstname" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name"><h5><b>Prénom</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez le prénom" [(ngModel)]="lastname" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name"><h5><b>Courriel</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez le courriel" [(ngModel)]="email" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name"><h5><b>Téléphone</b></h5></label>
+          <input type="tel" class="form-control" placeholder="Entrez le numéro de téléphone" [(ngModel)]="telephone">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5><b>Client</b></h5>
+          <select [(ngModel)]="selectedClient"><option *ngFor="let clientValue of clientValues" [ngValue]="clientValue.id">{{ clientValue.name }}</option></select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name"><h5><b>Spécialité</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez la spécialité" [(ngModel)]="speciality" >
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name"><h5><b>Titre</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez le titre" [(ngModel)]="title" >
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success" (click)="updateEmployee(firstname,lastname,email,telephone,speciality,title)">Valider</button>
+        <button class="btn btn-danger">Annuler</button>
+  </div>
+  </div>
+</content>
+

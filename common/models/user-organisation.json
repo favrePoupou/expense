@@ -1,0 +1,24 @@
+{
+  "name": "UserOrganisation",
+  "plural": "userOrganisations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "organisationName": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "users": {
+      "type": "hasMany",
+      "model": "user",
+      "foreignKey": "userOrganisationId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,73 @@
+// Model class based and mongodb connector 
+    => https://loopback.io/doc/en/lb3/MongoDB-connector.html
+
+// Environment Variable on windows 
+    => http://www.dowdandassociates.com/blog/content/howto-set-an-environment-variable-in-windows-command-line-and-registry/
+
+// To use timestamp
+    => https://www.npmjs.com/package/loopback-ds-timestamp-mixin
+
+ // To set the var environment
+ cd Cervo_project/cervo_expens>.\var_env.bat
+ node .
+
+ // To see the var environment
+ console.log('dede', process.env.CERVO_SMTP_PASSWORD);
+
+ // Define the access control to loopback Model
+ http://loopback.io/doc/en/lb3/Define-access-controls.html
+
+ // Push notifiation on mobile app with loopback 
+ http://loopback.io/doc/en/lb3/Push-notifications.html
+
+ // windows download vm iso
+ http://www.fitzweekly.com/2016/04/download-windows-virtual-machine-images.html
+
+ // Deploiment of loopback app
+ https://developer.ibm.com/apiconnect/2017/08/16/deploy-loopback-node-api-to-bluemix/
+ 
+ // To create service in he specific path and folder
+ E:\Cervo_Project\cervo_expense\client\src\services>ng generate service /services/Organisation
+
+ // Solve conflict on bitbucket
+ https://confluence.atlassian.com/bitbucket/resolve-merge-conflicts-704414003.html
+
+ // Auth Guard
+ https://github.com/mean-expert-official/loopback-sdk-builder/blob/master/tests/ng2web/src/app/shared/auth.guard.ts
+ 
+ // Auth Guard with rememberMe
+ https://github.com/mean-expert-official/loopback-sdk-builder/blob/master/tests/ng2web/src/app/access/access.component.html
+
+// Loopback push notification on mobile
+https://github.com/strongloop/loopback-example-push
+
+// Loopback offline synchronisation
+http://loopback.io/doc/en/lb3/Synchronization.html
+
+
+/Datepicker
+https://www.npmjs.com/package/ng2-datepicker
+
+//define object in angular 2
+https://stackoverflow.com/questions/43954433/angular-property-email-does-not-exist-on-type-with-aot-compilation
+
+// mobileédesktop detection
+https://stackoverflow.com/questions/41432533/how-to-detect-if-device-is-desktop-and-or-mobile-and-if-connection-is-wifi-or-n
+
+//offseting in bootstrap 4
+https://stackoverflow.com/questions/45650990/offsetting-columns-is-not-working-bootstrap-v4-0-0-beta
+
+// Page or component
+https://stackoverflow.com/questions/45279191/ionic-3-component-vs-page
+
+// Return data from service to component
+https://stackoverflow.com/questions/37867020/angular-2-return-data-directly-from-an-observable
+
+// Passing data from parent to child ( modal)
+https://ng-bootstrap.github.io/#/components/modal/examples
+
+// share data between components
+https://angularfirebase.com/lessons/sharing-data-between-angular-components-four-methods/
+
+// Manage the alert and error handling
+http://jasonwatmore.com/post/2017/06/25/angular-2-4-alert-toaster-notifications

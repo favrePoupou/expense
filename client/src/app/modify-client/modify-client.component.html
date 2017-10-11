@@ -1,0 +1,25 @@
+<header>
+    <h1>Modification Client</h1>
+</header>  
+  <body>
+    <content>      
+          <table class="table">
+            <thead>
+              <tr class="table-primary">
+                <th>Nom Client</th>
+                <th>Ville</th>                
+              </tr>
+            </thead>
+            <tbody>              
+              <tr class="success" *ngFor = "let client of clients" >
+                <td><input type="text" class="form-control" [(ngModel)]="client.name" required></td>                
+                <td><input type="text" class="form-control" [(ngModel)]="client.location" required></td>                
+              </tr>
+            </tbody>
+            <button class="btn btn-success" (click)="saveUpdateClient()"><i class="fa fa-check" aria-hidden="false"></i>Valider</button>
+            <button class="btn btn-danger" (click)="activeModal.close()">Annuler</button>
+          </table>        
+    </content>
+
+    {{naivo}}      
+  </body>

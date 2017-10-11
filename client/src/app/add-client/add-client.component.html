@@ -1,0 +1,28 @@
+<button class="btn btn-primary" [hidden]="addButton" (click)="openAddClientForm()">Ajout Client</button>
+<br /> <br />
+
+<content>
+  <div class="addClient" [hidden]="showAddClient">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group" [ngClass]="{'hasError': formError.clientName}" required>
+          <label for="name"><h5><b>Nom Client</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez le nom du client" [(ngModel)]="clientname" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group" [ngClass]="{'hasError': formError.clientLocation}">
+          <label for="name"><h5><b>Localisation</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez le site" [(ngModel)]="clientlocation" required>
+        </div>
+      </div>
+    </div>    
+    <div class="button">
+      <button type="submit" class="btn btn-warning" (click)="createClient(clientname,clientlocation)">Créér</button>
+      <button class="btn btn-danger" (click)="closeAddClientForm()">Fermer</button>
+    </div>
+  </div>
+  <div class="form-group center_alert">
+    <alert></alert>
+</div>
+</content>

@@ -1,0 +1,88 @@
+<button class="btn btn-primary" [hidden]="addButton" (click)="openAddEmployeeForm()">Ajout Employé</button>
+<br /> <br />
+
+<content>
+  <div class="addEmployee" [hidden]="showAddEmployee">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group" [ngClass]="{'hasError': formError.firstName}" required>
+          <label for="name"><h5><b>Nom</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez le nom" [(ngModel)]="firstname" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group" [ngClass]="{'hasError': formError.lastName}">
+          <label for="name"><h5><b>Prénom</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez le prénom" [(ngModel)]="lastname" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group" [ngClass]="{'hasError': formError.email}">
+          <label for="name"><h5><b>Courriel</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez le courriel" [(ngModel)]="email" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group" [ngClass]="{'hasError': formError.phone}">
+          <label for="name"><h5><b>Téléphone</b></h5></label>
+          <input type="tel" class="form-control" placeholder="Entrez le numéro de téléphone" [(ngModel)]="telephone">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <!-- <h5><b>Statut</b></h5>
+          <select [(ngModel)]="selectedStatus"><option *ngFor="let statusValue of statusValues" [ngValue]="statusValues.id">{{ statusValues }}</option></select> -->
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group" [ngClass]="{'hasError': formError.selectedClient}">
+          <h5><b>Client</b></h5>
+          <select [(ngModel)]="selectedClient" class="form-control"><option *ngFor="let clientValue of clientValues" [ngValue]="clientValue.id">{{ clientValue.name }} - {{ clientValue.location }}</option></select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name"><h5><b>Spécialité</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez la spécialité" [(ngModel)]="speciality">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name"><h5><b>Titre</b></h5></label>
+          <input type="text" class="form-control" placeholder="Entrez le titre" [(ngModel)]="title">
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-success" id="addLocation" (click)="showAddLocation()"><i class="fa fa-plus-square" aria-hidden="true"> Localisation</i></button>
+    
+    <div [hidden]="addLocation">  
+        <button class="btn btn-danger" id="hideAddLocation" (click)="hideAddLocation()"><i class="fa fa-window-close" aria-hidden="true"></i></button>      
+      <div class="row">
+        <div class="col">
+          Debut :
+          <material-datepicker placeholder="Entrez date debut" [(date)]="startDate"></material-datepicker>
+        </div>
+        <div class="col">
+          Fin :
+          <material-datepicker placeholder="Entrez date fin" [(date)]="endDate"></material-datepicker>
+        </div>
+        <div class="col">
+          Localisation : <input type="text" [(ngModel)]="country" placeholder="Entrez le site">
+        </div>
+      </div>                               
+    </div>
+    <div class="button">
+      <button type="submit" class="btn btn-warning" (click)="createEmployee(firstname,lastname,email,telephone,speciality,title)">Créér</button>
+      <button class="btn btn-danger" (click)="closeAddEmployeeForm()">Fermer</button>
+    </div>
+  </div>
+  <div class="form-group center_alert">
+    <alert></alert>
+</div>
+</content>

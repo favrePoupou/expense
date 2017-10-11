@@ -1,0 +1,85 @@
+{
+  "name": "user",
+  "plural": "users",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": false
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+     "temp_password": {
+      "type": "string",
+      "required": false
+    },    
+    "userStatus": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "userOrganisationId": {
+      "type": "string"
+    },
+    "userSpeciality": {
+      "type": "string"
+    },    
+    "userTitle": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "accessToken",
+      "foreignKey": "userId"
+    },
+    "userRole": {
+      "type": "belongsTo",
+      "model": "UserRole",
+      "foreignKey": "userRoleId"
+    },
+    "userOrganisation": {
+      "type": "belongsTo",
+      "model": "UserOrganisation",
+      "foreignKey": "userOrganisationId"
+    },
+    "expenses": {
+      "type": "hasMany",
+      "model": "Expense",
+      "foreignKey": "userId"
+    },
+    "userSettings": {
+      "type": "hasOne",
+      "model": "UserSetting",
+      "foreignKey": "userId"
+    },
+    "clients": {
+      "type": "hasMany",
+      "model": "Client",
+      "foreignKey": "userId",
+      "through": "UserClientHistory"
+    },
+    "userClients": {
+      "type": "hasMany",
+      "model": "Client"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

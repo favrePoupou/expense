@@ -1,0 +1,43 @@
+<header>
+  <h1>Liste des employés</h1>
+</header>
+
+<body>
+  <content>
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr class="table-primary">
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Courriel</th>
+              <th>Titre</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <div class="alert alert-warning" id="message" [hidden]="employeeValues.length">
+              <strong>Information !</strong> Vous devez avoir au moins un client afin de pouvoir rajouter un employé
+            </div>
+            <tr class="success" *ngFor="let employeeValue of employeeValues">
+              <td>{{ employeeValue.firstName}}</td>
+              <td>{{ employeeValue.lastName}}</td>
+              <td>{{ employeeValue.email }}</td>
+              <td>{{ employeeValue.userTitle}}</td>
+              <td>
+                <button class="btn btn-danger" (click)="onDelete(employeeValue)"><i class="fa fa-trash-o" aria-hidden="false"> Supprimer </i></button>
+                <button class="btn btn-warning" (click)="onChange(employeeValue)"><i class="fa fa-pencil fa-fw" aria-hidden="false"></i></button>
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <app-add-employee></app-add-employee>
+        <!-- <app-edit-employee></app-edit-employee> -->
+      </div>
+    </div>
+  </content>
+</body>

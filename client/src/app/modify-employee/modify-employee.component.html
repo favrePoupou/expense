@@ -1,0 +1,87 @@
+<header>
+  <h1>Modification employé</h1>
+</header>
+<content>
+
+  <table class="table">
+    <thead>
+      <tr class="table-primary">
+        <th>Nom</th>
+        <th>Prenom</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td><input type="text" class="form-control" [(ngModel)]="newFirstName"></td>
+        <td><input type="text" class="form-control" [(ngModel)]="newLastName"></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table">
+    <thead>
+      <tr class="table-primary">
+        <th>Courriel</th>
+        <th>Téléphone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td><input type="text" class="form-control" [(ngModel)]="newEmail"></td>
+        <td><input type="text" class="form-control" [(ngModel)]="newPhone"></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table">
+    <thead>
+      <tr class="table-primary">
+        <th>Spécialité</th>
+        <th>Titre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td><input type="text" class="form-control" [(ngModel)]="newSpeciality"></td>
+        <td><input type="text" class="form-control" [(ngModel)]="newTitle"></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table">
+    <thead>
+      <tr class="table-primary">
+        <th>Client</th>
+        <th>Localisation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td *ngFor="let employee of employees"><input type="text" class="form-control" [(ngModel)]="employee.client"></td>
+        <td><input type="text" class="form-control" [(ngModel)]="newLocation"></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="wrapper">
+    <button class="button" type="submit" class="btn btn-primary" (click)="clearDate()">Effacer les dates</button>
+  </div>
+  <table class="table">
+    <thead>
+      <tr class="table-primary">
+        <th>Debut</th>
+        <th>Fin</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>
+          <material-datepicker placeholder="Entrez date debut" [(date)]="newStartDate"></material-datepicker>
+        </td>
+        <td>
+          <material-datepicker placeholder="Entrez date debut" [(date)]="newEndDAte"></material-datepicker>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="buttons">
+    <button type="submit" class="btn btn-success" id="sauver"(click)="modifyEmployee(newFirstName,newLastName,newEmail,newPhone,newSpeciality,newTitle,newLocation,newStartDate,newEndDAte)">Sauver</button>
+    <button class="btn btn-danger" id="annuler" (click)="closeAddEmployeeForm()">Annuler</button>
+  </div>
+</content>

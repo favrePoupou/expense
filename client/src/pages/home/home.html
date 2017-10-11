@@ -1,0 +1,47 @@
+<header>
+  <nav class="navbar fixed-top navbar-dark bg-dark">
+    <span class="navbar-text custom-text mx-auto">{{ title }}</span>
+    <ul class="nav pull-sm-right">
+      <li class="nav-item">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle> {{ userInfo }}</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <a><button  id="logout" class="dropdown-item" (click)="onLogout()">Deconnexion</button></a>
+          </div>
+        </div>
+        <!--<a class="nav-link" id="logout" (click)="onLogout()">Deconnexion</a> -->
+      </li>
+    </ul>
+  </nav>
+</header>
+<content>
+  <ngb-tabset type="pills">
+    <ngb-tab title="CLIENTS">
+      <ng-template ngbTabContent>
+        <client></client>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="EMPLOYES">
+      <ng-template ngbTabContent>
+        <employee></employee>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="PROJETS" [disabled]="true">
+      <ng-template ngbTabContent>
+        <project></project>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="DEPENSES" [disabled]="false">
+      <ng-template ngbTabContent>
+        <expense></expense>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="HISTORIQUE" [disabled]="true">
+      <ng-template ngbTabContent>
+        <history></history>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+
+
+</content>

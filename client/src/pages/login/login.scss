@@ -1,0 +1,34 @@
+.center_div{
+margin: 0 auto;
+background-color: grey;
+width: 40%;
+text-align: center;
+}
+
+.center_alert{
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    }
+
+.register{
+    margin: 0 auto;
+    width: 40%;
+    margin-top: 4%;
+    margin-bottom: 4%
+}
+
+.color_text{
+    color: red;
+    text-decoration: bold;
+}
+
+.color_text_initialisation{
+    color: yellow;
+    text-decoration: bold;
+}
+
+.hasError .form-control{
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}

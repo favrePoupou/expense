@@ -1,0 +1,47 @@
+{
+  "name": "Address",
+  "plural": "addresses",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "streetNumberName": {
+      "type": "string",
+      "required": true
+    },
+    "apartmentNumber": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "client": {
+      "type": "belongsTo",
+      "model": "Client",
+      "foreignKey": "clientId"
+    },
+    "country": {
+      "type": "belongsTo",
+      "model": "Country",
+      "foreignKey": "countryId"
+    },
+    "province": {
+      "type": "belongsTo",
+      "model": "Province",
+      "foreignKey": "provinceId"
+    },
+    "city": {
+      "type": "belongsTo",
+      "model": "City",
+      "foreignKey": "cityId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

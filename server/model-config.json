@@ -1,0 +1,92 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "../node_modules/loopback-ds-timestamp-mixin",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "ACL": {
+    "dataSource": "cervo",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "cervo",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "cervo",
+    "public": false
+  },
+  "user": {
+    "dataSource": "cervo",
+    "public": true
+  },  
+  "Email": {
+    "dataSource": "emailDatasource"
+  },
+  "UserRole": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "UserOrganisation": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "Expense": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "UserSetting": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "Currency": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "ExpenseCode": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "Image": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "Client": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "Address": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "Country": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "Province": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "City": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "UserClientHistory": {
+    "dataSource": "cervo",
+    "public": true
+  },
+  "accessToken": {
+    "dataSource": "cervo",
+    "public": false
+  }
+}

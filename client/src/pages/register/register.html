@@ -1,0 +1,48 @@
+<header>
+    <div style="text-align:center">
+        <h1>
+            Creer son compte
+        </h1>
+    </div>
+</header>
+<content>
+    <div class="container center_div">
+        <div>
+            <div class="form-group" [ngClass]="{'hasError': formError.firstname}">
+                <label for="name">Nom</label>
+                <input type="text" class="form-control" placeholder="Entrez votre nom" [(ngModel)]="firstname" required>
+            </div>
+            <div class="form-group" [ngClass]="{'hasError': formError.lastname}">
+                <label for="name">Prénom</label>
+                <input type="text" class="form-control" placeholder="Entrez votre prénom" [(ngModel)]="lastname" required>
+            </div>
+            <div class="form-group" [ngClass]="{'hasError': formError.email}">
+                <label for="name">Courriel</label>
+                <input type="mail" class="form-control" placeholder="Entrez votre courriel" [(ngModel)]="email" required>
+            </div>
+            <div class="form-group" [ngClass]="{'hasError': formError.selectedValue}">
+                <label for="name">Organisation</label>
+                <select [(ngModel)]="selectedValue" class="form-control">
+              <option *ngFor="let value of values" [ngValue]="value.id">{{value.organisationName}}</option>
+            </select>
+            </div>
+
+            <div class="form-group" [ngClass]="{'hasError': formError.password}">
+                <label for="name">Mot de passe</label>
+                <input type="password" class="form-control" placeholder="Entrez votre mot de passe" [(ngModel)]="password" required>
+                <span style="color: #721c24;">Le mot de passe doit contenir au minimum 8 caractères dont au moins une lettre majuscule et un chiffre.</span>
+            </div>
+            <div class="form-group" [ngClass]="{'hasError': formError.passwordConfirm}">
+                <label for="name">Confirmation mot de passe</label>
+                <input type="password" class="form-control" placeholder="Confirmez mot de passe" [(ngModel)]="passwordConfirm" required>
+            </div>
+            <button type="submit" class="btn btn-warning" (click)="signUp(firstname,lastname,email,password,passwordConfirm)">S'enregistrer</button>
+            <div class="form-group">
+                <div class="register"><a routerLink="/" routerLinkActive="active">Retour</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group center_alert">
+        <alert></alert>
+    </div>
+</content>

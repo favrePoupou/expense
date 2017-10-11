@@ -1,0 +1,37 @@
+{
+  "name": "UserSetting",
+  "plural": "userSettings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "phoneNotifications": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "emailNotifications": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "timeOfNotification": {
+      "type": "date"
+    },
+    "freqOfNotification": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

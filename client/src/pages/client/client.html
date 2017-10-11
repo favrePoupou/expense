@@ -1,0 +1,36 @@
+<header>
+  <h1>Liste des Clients</h1>
+</header>
+
+<body>
+  <content>
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr class="table-primary">
+              <th>Nom Client</th>
+              <th>Ville</th>
+              <th>Suppimer</th>
+              <th>Modifier</th>
+            </tr>
+          </thead>
+          <tbody>
+            <div class="alert alert-warning" id="message" [hidden]="clientValues.length">
+              <strong>Bienvenue !</strong> Veuillez rajouter au moins un client afin de pouvoir rajouter un employé
+            </div>
+            <tr class="success" *ngFor="let clientValue of clientValues">
+              <td>{{ clientValue.name }}</td>
+              <td>{{ clientValue.location }}</td>
+              <td><button class="btn btn-danger" (click)="onDelete(clientValue)"><i class="fa fa-trash-o" aria-hidden="false"></i></button></td>
+              <td><button class="btn btn-warning" (click)="changeClient(clientValue)"><i class="fa fa-pencil-square-o" aria-hidden="false"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <app-add-client></app-add-client>
+      </div>
+    </div>
+  </content>
+</body>

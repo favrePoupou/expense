@@ -1,0 +1,39 @@
+{
+  "name": "Province",
+  "plural": "provinces",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "abbreviation": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "addresses": {
+      "type": "hasMany",
+      "model": "Address",
+      "foreignKey": "provinceId"
+    },
+    "country": {
+      "type": "belongsTo",
+      "model": "Country",
+      "foreignKey": "countryId"
+    },
+    "cities": {
+      "type": "hasMany",
+      "model": "City",
+      "foreignKey": "provinceId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

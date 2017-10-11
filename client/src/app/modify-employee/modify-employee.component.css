@@ -1,0 +1,22 @@
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.sauver {
+    position: absolute;
+    top: 50%;
+}
+
+.annuler {
+    position: absolute;
+    top: 50%;
+}

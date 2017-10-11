@@ -1,0 +1,42 @@
+<p>Bonjour
+    <%= userlastName %>
+        <%= userfirstName %> , </p>
+<p>
+    Votre administrateur vient de procéder à votre inscription avec les informations suivantes:
+</p>
+<p>
+    email :
+    <%= to %> , mot de passe temporaire :
+        <%= userPassword %>
+</p>
+<p>
+    telephone :
+    <%= userPhone %>
+</p>
+<p>
+    statut:
+    <%= contentStatus %>
+</p>
+
+<%if (userSpeciality > 0) { %>
+    <p>
+        Spécialité:
+        <%= userSpeciality %>
+    </p>
+    <% } %>
+
+
+
+        <p>
+            Titre:
+            <%= userTitle %>
+        </p>
+        <p>
+            Vous pouvez finaliser votre inscription en téléchargeant l'application :
+        </p>
+        <p>
+            - Pour Iphone : <a href="https://itunes.apple.com/ca/genre/ios/id36?mt=8">Téléchargez</a>
+        </p>
+        <p>
+            - Pour Android : <a href="https://play.google.com/store/apps?hl=fr">Téléchargez</a>
+        </p>

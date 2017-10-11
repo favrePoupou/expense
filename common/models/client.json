@@ -1,0 +1,43 @@
+{
+  "name": "Client",
+  "plural": "clients",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "userStatus": {
+      "type": "string",
+      "required": true
+    }
+    ,
+    "location": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "addresses": {
+      "type": "hasOne",
+      "model": "Address",
+      "foreignKey": "clientId"
+    },
+    "users": {
+      "type": "hasMany",
+      "model": "user",
+      "foreignKey": "clientId",
+      "through": "UserClientHistory"
+    },
+    "clientUsers": {
+      "type": "hasMany",
+      "model": "user"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

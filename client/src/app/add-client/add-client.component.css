@@ -1,0 +1,35 @@
+.center_div{    
+    margin-top: 30%;
+    background-color:#9a8d8d;  
+    width:100% /* value of your choice which suits your alignment */    ;
+    text-align: center;
+}
+
+.center_alert{
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+}
+
+.register{
+    margin: 0 auto;
+    width:100%;
+    margin-top: 4%;
+}
+
+.color_text{
+    color: red;
+    text-decoration: bold
+}
+
+.hasError .form-control {
+    background-color: #f8d7da;
+    border-color: #721c24;
+}
+
+/*
+.btn{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+*/
